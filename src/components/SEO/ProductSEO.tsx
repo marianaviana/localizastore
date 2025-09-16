@@ -37,7 +37,7 @@ const ProductSEO: React.FC<ProductSEOProps> = ({ product }) => {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: product.rating.toString(),
+      ratingValue: product.rating.toString() ?? '0',
       reviewCount: '100'
     }
   };
