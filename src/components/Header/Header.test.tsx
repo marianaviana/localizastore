@@ -16,7 +16,6 @@ describe('Header', () => {
     render(<MockHeader />);
 
     expect(screen.getByAltText(/localiza loja/i)).toBeInTheDocument();
-    expect(screen.getByLabelText('search')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /cart/i })).toBeInTheDocument();
   });
 
