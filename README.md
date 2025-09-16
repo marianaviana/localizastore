@@ -257,9 +257,8 @@ VITE_API_URL=https://dummyjson.com
 
 -   **Lighthouse Score:** 90+ em performance, acessibilidade e best practices
 
--   **Bundle Size:** Otimizado com code splitting do Vite
+<img width="586" height="242" alt="image" src="https://github.com/user-attachments/assets/a8e6c9f6-0fc4-41ca-8a19-c9d837a68ff7" />
 
--   **Images:** Lazy loading e formatos modernos
 
 
 ## 🔮 Algumas melhorias possíveis
