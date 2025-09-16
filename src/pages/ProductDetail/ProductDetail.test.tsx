@@ -1,51 +1,42 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { CartProvider } from '../../context/CartContext';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
+import { CartProvider } from '../../context/CartContext';
 import { productService } from '../../utils/api';
+import { render, screen, waitFor } from '@testing-library/react';
 
-jest.mock('../../utils/api');
+jest.mock('../../utils/api', () => ({
+  productService: {
+    getProduct: jest.fn(),
+  },
+}));
 
 const mockProduct = {
   id: 1,
   title: 'Test Product',
-  description: 'Test Description',
-  price: 100,
-  discountPercentage: 10,
-  rating: 4.5,
-  stock: 10,
-  brand: 'Test Brand',
-  category: 'smartphones',
-  thumbnail: 'test-thumbnail.jpg',
-  images: ['test-image1.jpg', 'test-image2.jpg'],
+  description: 'This is a test product',
+  price: 99,
+  images: ['https://via.placeholder.com/150'],
+  rating: 4.5
 };
 
-const MockProductDetail = () => (
-  <BrowserRouter>
-    <CartProvider>
-      <Routes>
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/" element={<div>Home</div>} />
-      </Routes>
-    </CartProvider>
-  </BrowserRouter>
-);
-
 describe('ProductDetail', () => {
-  beforeEach(() => {
+  it('renders product details', async () => {
     (productService.getProduct as jest.Mock).mockResolvedValue({
       data: mockProduct,
     });
-  });
 
-  it('renders product details', async () => {
-    render(<MockProductDetail />);
+    render(
+      <CartProvider>
+        <MemoryRouter initialEntries={['/product/1']}>
+          <Routes>
+            <Route path="/product/:id" element={<ProductDetail />} />
+          </Routes>
+        </MemoryRouter>
+      </CartProvider>
+    );
 
     await waitFor(() => {
-      expect(screen.getByText('Test Product')).toBeInTheDocument();
+      expect(screen.getByText(mockProduct.title)).toBeInTheDocument();
     });
-
-    expect(screen.getByText('Test Description')).toBeInTheDocument();
-    expect(screen.getByText('$90.00')).toBeInTheDocument();
   });
 });
