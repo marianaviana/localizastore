@@ -113,16 +113,16 @@ src/
 
 {
   "id": 1,
-  "title": "iPhone 9",
-  "description": "An apple mobile which is nothing like apple",
-  "price": 549,
-  "discountPercentage": 12.96,
-  "rating": 4.69,
-  "stock": 94,
-  "brand": "Apple",
-  "category": "smartphones",
-  "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-  "images": ["https://i.dummyjson.com/data/products/1/1.jpg"]
+  "title": "Amazon Echo Plus",
+  "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+  "price": 99.99,
+  "discountPercentage": 12.07,
+  "rating": 4.99,
+  "stock": 61,
+  "brand": "Amazon",
+  "category": "mobile-accessories",
+  "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp",
+  "images": ["https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp"]
 }
 ```
 
@@ -213,7 +213,7 @@ npm run deploy       # Deploy na Vercel
 
 ## 🧪 Testes
 
-A suíte de testes cobre:
+A suíte de testes cobre alguns casos de:
 
 -   **Componentes:** Renderização e interações
 
@@ -221,7 +221,7 @@ A suíte de testes cobre:
 
 -   **Context:** Gerenciamento de estado
 
--   **Integração:** Fluxos completos
+-   **Integração:** Fluxos de integração
 
 
 ```bash
