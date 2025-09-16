@@ -104,6 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, sx = {} }) => {
           onClick={handleAddToCart}
           fullWidth
           variant="contained"
+          aria-label="Add to Cart"
         >
           Add to Cart
         </Button>

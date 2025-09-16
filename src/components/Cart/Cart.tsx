@@ -31,6 +31,7 @@ const Cart: React.FC = () => {
           variant="contained"
           onClick={() => navigate('/')}
           sx={{ mt: 2 }}
+          aria-label="Continue Shopping"
         >
           Continue Shopping
         </Button>
@@ -146,6 +147,7 @@ const Cart: React.FC = () => {
           variant="contained"
           size="large"
           onClick={() => navigate('/checkout')}
+          aria-label="Proceed to Checkout"
         >
           Proceed to Checkout
         </Button>

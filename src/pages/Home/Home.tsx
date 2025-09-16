@@ -86,6 +86,7 @@ const Home: React.FC = () => {
       <Box sx={{ mb: 4, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
         <TextField
           label="Search products"
+          aria-label="Search products"
           variant="outlined"
           value={searchTerm}
           onChange={(e) => {
@@ -100,6 +101,7 @@ const Home: React.FC = () => {
           <Select
             value={category}
             label="Category"
+            aria-label="Select Category"
             onChange={(e) => {
               setCategory(e.target.value);
               setPage(1);
@@ -119,6 +121,7 @@ const Home: React.FC = () => {
           <Select
             value={sortBy}
             label="Sort By"
+            aria-label="Sort By"
             onChange={(e) => setSortBy(e.target.value)}
           >
             <MenuItem value="title">Name (A-Z)</MenuItem>

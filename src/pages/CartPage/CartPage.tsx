@@ -85,6 +85,7 @@ const CartPage: React.FC = () => {
                 fullWidth
                 startIcon={<ArrowBack />}
                 onClick={handleContinueShopping}
+                aria-label="Continue Shopping"
               >
                 Continue Shopping
               </Button>

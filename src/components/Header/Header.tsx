@@ -89,7 +89,7 @@ const Header: React.FC = () => {
         </SearchContainer>
 
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <IconButton color="inherit" onClick={handleCartClick}>
+          <IconButton color="inherit" onClick={handleCartClick} aria-label="Cart">
             <Badge badgeContent={totalItems} color="secondary">
               <ShoppingCart />
             </Badge>

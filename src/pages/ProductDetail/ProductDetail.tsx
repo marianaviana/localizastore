@@ -51,6 +51,7 @@ const ProductDetail: React.FC = () => {
           startIcon={<ArrowBack />}
           onClick={() => navigate('/')}
           sx={{ mt: 2 }}
+          aria-label="Back to Products"
         >
           Back to Products
         </Button>
@@ -77,12 +78,12 @@ const ProductDetail: React.FC = () => {
           startIcon={<ArrowBack />}
           onClick={() => navigate('/')}
           sx={{ mb: 3 }}
+          aria-label="Back to Products"
         >
           Back to Products
         </Button>
 
         <Grid container spacing={4}>
-          {/* Imagens */}
           <Grid size={{ xs: 12, md: 6 }}>
             <Box sx={{ mb: 3 }}>
               <img
@@ -178,6 +179,7 @@ const ProductDetail: React.FC = () => {
               onClick={handleAddToCart}
               disabled={product.stock === 0}
               sx={{ py: 1.5, px: 4 }}
+              aria-label="Add to Cart"
             >
               {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
             </Button>
