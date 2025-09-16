@@ -67,6 +67,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const updateQuantity = (productId: number, quantity: number) => {
+    if (quantity < 1) return;
     dispatch({ type: 'UPDATE_QUANTITY', payload: { productId, quantity } });
   };
 
