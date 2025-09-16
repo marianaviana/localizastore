@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Type-only imports */
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "types": ["jest", "node"]
   },
   "include": ["src"]
 }
