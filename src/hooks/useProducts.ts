@@ -14,7 +14,7 @@ export const useProducts = () => {
         const response = await productService.getAllProducts();
         setProducts(response.data.products);
       } catch (err) {
-        setError('Failed to fetch products');
+        setError('Sorry, we encountered an error while searching for products, please try again later or contact us via email contato@mariviana.dev');
         console.error('Error fetching products:', err);
       } finally {
         setLoading(false);
@@ -39,7 +39,7 @@ export const useProduct = (id: number) => {
         const response = await productService.getProduct(id);
         setProduct(response.data);
       } catch (err) {
-        setError('Failed to fetch product');
+        setError('Sorry, we encountered an error while searching for the product, please try again later or contact us at contato@mariviana.dev');
         console.error('Error fetching product:', err);
       } finally {
         setLoading(false);
