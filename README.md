@@ -64,30 +64,76 @@ A Localiza Store é uma Single Page Application (SPA) de e-commerce que apresent
 -   **GitHub Actions** - CI/CD (opcional)
 
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Estrutura base do Projeto
 
 ```
+├── .gitignore
+├── README.md
+├── __mocks__/
+│   └── fileMock.js
+├── babel.config.js
+├── eslint.config.js
+├── index.html
+├── jest.config.js
+├── package-lock.json
+├── package.json
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.css
+│   ├── App.tsx
+│   ├── Routes.tsx
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── Cart/
+│   │   │   ├── Cart.test.tsx
+│   │   │   └── Cart.tsx
+│   │   ├── Header/
+│   │   │   ├── Header.test.tsx
+│   │   │   └── Header.tsx
+│   │   ├── ProductCard/
+│   │   │   ├── ProductCard.test.tsx
+│   │   │   └── ProductCard.tsx
+│   │   └── SEO/
+│   │       ├── DefaultSEO.tsx
+│   │       └── ProductSEO.tsx
+│   ├── context/
+│   │   ├── CartContext.test.tsx
+│   │   └── CartContext.tsx
+│   ├── hooks/
+│   │   ├── useCart.ts
+│   │   ├── useProducts.test.ts
+│   │   ├── useProducts.ts
+│   │   ├── useSEO.test.ts
+│   │   └── useSEO.ts
+│   ├── index.css
+│   ├── main.tsx
+│   ├── pages/
+│   │   ├── CartPage/
+│   │   │   ├── CartPage.test.tsx
+│   │   │   └── CartPage.tsx
+│   │   ├── Home/
+│   │   │   ├── Home.test.tsx
+│   │   │   └── Home.tsx
+│   │   └── ProductDetail/
+│   │       ├── ProductDetail.test.tsx
+│   │       └── ProductDetail.tsx
+│   ├── setupTests.ts
+│   ├── tests/
+│   │   └── integration/
+│   │       └── navigationFlow.test.tsx
+│   ├── theme/
+│   │   └── theme.ts
+│   ├── types/
+│   │   └── index.ts
+│   ├── utils/
+│   │   └── api.ts
+│   └── vite-env.d.ts
+├── tsconfig.json
+├── vercel.json
+└── vite.config.ts
 
-src/
-├── components/        # Componentes reutilizáveis
-│   ├── Header/        # Cabeçalho com carrinho
-│   ├── ProductCard/   # Card de produto
-│   ├── Cart/          # Componente do carrinho
-│   └── SEO/           # Meta tags dinâmicas
-├── pages/             # Páginas da aplicação
-│   ├── Home/          # Página inicial
-│   ├── ProductDetail/ # Detalhes do produto
-│   └── CartPage/      # Página do carrinho
-├── hooks/             # Custom hooks
-│   ├── useProducts.ts # Fetch de produtos
-│   └── useSEO.ts      # Gerenciamento de SEO
-├── context/           # Context API
-│   └── CartContext.tsx # Estado global do carrinho
-├── types/             # Definições TypeScript
-├── utils/             # Utilitários
-│   └── api.ts         # Configuração da API
-├── theme/             # Tema Material UI
-└── App.tsx            # Componente principal
 ```
 
 ## 🔌 API Utilizada
